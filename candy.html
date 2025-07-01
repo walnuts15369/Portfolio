@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">こぐまのおやつ</h1>
+    <p class="explanation">田舎の古民家を改装した、地元密着型の焼き菓子屋さんをイメージして作成したブランドです。<br>
+                            「なつかしさ」と「ぬくもり」を大切に、子どもからおばあちゃんまで思わず手に取りたくなるような、やさしい雰囲気を目指しました。<br>
+                            ロゴにはお店の看板キャラクター“こぐま”を起用し、手書き風のフォントやくすみカラーで素朴であたたかい印象に仕上げています。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item3">
+            <img src="img/ロゴ.png" alt="ロゴ">
+            <div class="bonnyme-text">
+                <p class="sub-title">ロゴ</p>
+                <p class="description">お店の「顔」となるロゴは、焼きたてクッキーをぎゅっと抱きしめる“こぐま”のイラストで表現しました。
+チョコチップクッキーのチップの数は8個。これは「末広がり」を意味する縁起の良い数字で、お店の発展や繁盛、そして幸せな未来への願いが込められています。
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="fade-up">
+        <div class="category-item3">
+            <img src="img/ロゴウインク.png" alt="ウインク">
+            <div class="bonnyme-text">
+                <p class="sub-title">ロゴ（ウインク）</p>
+                <p class="description">ロゴのウインクバージョンです。
+遊び心を感じさせる表情で、見る人に親しみや可愛さを印象づけます。</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="fade-up">
+        <div class="category-item3">
+            <img src="img/ロゴ笑顔.png" alt="笑顔">
+            <div class="bonnyme-text">
+                <p class="sub-title">ロゴ（笑顔）</p>
+                <p class="description">ロゴの笑顔バージョンです。
+クッキーを持ったこぐまがふわっと微笑むことで、ほっこりとした温かさを伝えます。</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="fade-up">
+        <div class="category-item4">
+            <img src="img/ショップカード表.jpg" alt="表">
+            <div class="bonnyme-text">
+                <p class="sub-title">ショップカード（表面）</p>
+                <p class="description">木のぬくもりを感じるデザインに仕上げました。
+看板を持ったこぐまが呼びかけるような構図で、お客さまに親しみや安心感を持ってもらえるよう工夫しています。</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="fade-up">
+        <div class="category-item4">
+            <img src="img/ショップカード裏.png" alt="裏">
+            <div class="bonnyme-text">
+                <p class="sub-title">ショップカード（裏面）</p>
+                <p class="description">裏面はロゴのこぐまたちを使ったパターン柄。
+よく見るとウインクや笑顔のこぐま、さらに逆さまのこぐまも隠れていて、細部まで遊び心を詰め込みました。</p>
+            </div>
+        </div>
+        </div>
+</div>
+
+    <div class="btn2">
+        <a class="btn-all2" href="index.html">Back to Top</a>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+        entry.target.classList.remove('show');
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+
+</body>
+</html>

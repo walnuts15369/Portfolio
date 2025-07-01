@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">高校時代の作品</h1>
+    <p class="explanation">高校生の頃に制作したデザイン作品の一部をご紹介します。学校での課題やコンテストに取り組んだ際の作品です。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item5">
+            <img src="img/温州みかん.png" alt="温州みかん">
+            <div class="bonnyme-text">
+                <p class="sub-title">温州みかんをPRするプロジェクト</p>
+                <p class="description">温州みかんの発祥地である鹿児島県長島町と学校が連携して取り組んだPRプロジェクトです。<br>
+                    画像や動画をAIで生成し、PRメディアを作成するという課題のもと、背景画像はAdobe Fireflyで制作しました。みかんの形を活かして文字の背景に使用した点がデザインのポイントです。<br>
+                    また、AI生成を活用しながらも、構図や配色、タイポグラフィには自分なりのこだわりを込め、直感的に「おいしそう」「食べてみたい」と思ってもらえるようなビジュアル表現を目指しました。
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="fade-up">
+        <div class="category-item6">
+            <img src="img/トートバッグデザイン.jpg" alt="トートバッグ">
+            <div class="bonnyme-text">
+                <p class="sub-title">トートバッグデザインコンテスト</p>
+                <p class="description">新新潟デザイン専門学校が主催する「高校生トートバッグデザインコンテスト2024」に応募した作品です。<br>
+                    テーマは「colorful」だったため、見た瞬間に目を引くような鮮やかでポップな色使いを意識してデザインしました。色やモチーフの組み合わせに自分らしさを込め、他にはない大胆で印象的な世界観を表現しました。</p>
+            </div>
+        </div>
+        </div>
+    <div class="btn2">
+        <a class="btn-all2" href="index.html">Back to Top</a>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+        entry.target.classList.remove('show'); 
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+</body>
+</html>

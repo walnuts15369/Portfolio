@@ -804,12 +804,17 @@ body {
     text-align: center;
   }
 
+  .contact-text {
+    margin-left: 5%;
+  }
+  
+
   .contact-text h6 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .contact-text p {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   a[href^="tel"] {

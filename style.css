@@ -328,6 +328,10 @@ h3 {
   line-height: 1.5;
 }
 
+.description span {
+  font-size: 10px;
+}
+
 .btn {
   text-align: center;
   margin-top: 10px;
@@ -686,6 +690,10 @@ body {
 
   .profile-text {
     max-width: 100%;
+  }
+
+  .furigana {
+    margin-left: 82px;
   }
 
   .row-align {

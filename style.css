@@ -812,6 +812,14 @@ body {
     font-size: 16px;
   }
 
+  a[href^="tel"] {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none;
+  cursor: default;
+}
+
+
   .cat {
     margin-top: 30px;
     max-width: 300px;

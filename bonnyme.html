@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonny Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">Bonny Me</h1>
+    <p class="explanation">実際のクライアントワークで、新ブランド「Bonny Me」のロゴと、ECサイト用のバナーデザインを制作しました。<br>
+                            ブランドのターゲット層や雰囲気に合わせ、上品で女性らしさを感じるデザインに仕上げました。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item">
+            <img src="img/Bonny Me.png" alt="ロゴ">
+            <div class="bonnyme-text">
+                <p class="sub-title">ブランドロゴ</p>
+                <p class="description">新規オープンするアパレルブランドのロゴを作成しました。<br>
+                                        ブランドのイメージは「エレガント」。主なターゲットは20代〜30代の女性です。<br>
+                                        背景は白色、ピンク・紫系の色を使用したく、緑色は避けたいとのご要望がありました。<br>
+                                        また、シンプルな文字とシンボルマークの組み合わせでロゴを制作してほしいとのご依頼でした。<br>
+                                        シンボルマークは、スカートを履いたシルエットの慎まやか（つつしまやか）な女性が歩くイメージで制作しました。<br>
+                                        「n」につながる足は太く地に足をつけて歩いており、離れている足は細く軽やかにしました。<br>
+                                        色にもこだわりがあり、「見目麗しい慧眼（けいがん）の人※」という意味のダリアパープルと「繊細な感性・女性らし」」
+                                        の意味を持つマゼンタを、マーブル模様に混ぜ合わせました。※顔貌が美しく、本質を見抜く力のある賢い人という意味</p>
+            </div>
+        </div>
+        </div>
+<div class="fade-up">
+        <div class="category-item">
+            <img src="img/バナー.png" alt="バナー">
+            <div class="bonnyme-text">
+                <p class="sub-title">バナー（オープニングセール）</p>
+                <p class="description">通販サイトのトップページに掲載するオープニングセール用バナーを作成しました。<br>
+                                        ブランドターゲットに合わせ、女性の目を引くやわらかく透明感のあるデザインに仕上げました。</p>
+            </div>
+        </div>
+</div>
+
+<div class="fade-up">
+        <div class="category-item">
+            <img src="img/バナーサービス.png" alt="旧サービス">
+            <div class="bonnyme-text">
+                <p class="sub-title">バナー（サービス）</p>
+                <p class="description">お客様に提供しているサービス内容を分かりやすくまとめたバナーです。<br>
+                                        視線誘導を意識し、情報が自然と目に入るレイアウトを心がけました。</p>
+            </div>
+        </div>
+</div>
+
+<div class="fade-up">
+        <div class="category-item">
+            <img src="img/バナーサービス（改）.png" alt="サービス">
+            <div class="bonnyme-text">
+                <p class="sub-title">バナー（改良版）</p>
+                <p class="description">上記のサービスバナーに修正依頼があったため、改善したバージョンです。<br>
+                                        伝わりづらかった導入文を省き、必要な情報がより明確に伝わるように工夫しました。</p>
+            </div>
+        </div>
+</div>
+
+<div class="fade-up">
+        <div class="category-item">
+            <img src="img/バナープレゼント.png" alt="プレゼント">
+            <div class="bonnyme-text">
+                <p class="sub-title">バナー（プレゼント）</p>
+                <p class="description">購入者特典としてのプレゼント企画用バナーを作成しました。<br>
+                                        全体のトーンを統一し、背景や配色・店名ロゴに一貫性を持たせることでブランドイメージを強化しています。</p>
+            </div>
+        </div>
+</div>
+
+<div class="fade-up">
+        <div class="category-item">
+            <img src="img/バナー別パターン.png" alt="別パターン">
+            <div class="bonnyme-text">
+                <p class="sub-title">バナー（別パターン）</p>
+                <p class="description">オープニングセールバナーの別案として制作しました。<br>
+                                        ブランドイメージを広げる目的で、あえてインパクトのある配色で仕上げたデザインです。（今回は採用見送り）</p>
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+    <div class="btn2">
+        <a class="btn-all2" href="index.html">Back to Top</a>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); // ← これで何回も出るように
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+</body>
+</html>

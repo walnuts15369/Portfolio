@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="light-flash"></div>
+
+    <div class="cat-container">
+      <img src="img/cat-front.png" class="cat" id="cat-front" />
+    </div>
+
+    <audio id="meow" src="猫の鳴き声1.mp3" preload="auto"></audio>
+
+    <script>
+      const cat1 = document.getElementById('cat-front');
+      const flash = document.querySelector('.light-flash');
+      const meow = document.getElementById('meow');
+      const container = document.querySelector('.cat-container');
+
+      window.addEventListener('load', () => {
+        container.classList.add('dropBounce');
+      });
+
+      cat1.addEventListener('click', () => {
+        meow.play();
+
+        
+        cat1.classList.add('fade-out');
+
+        
+        flash.classList.add('flash-in');
+
+        
+        setTimeout(() => {
+          window.location.href = 'main.html';
+        }, 1800);
+      });
+    </script>
+  </body>
+</html>

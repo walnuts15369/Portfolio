@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">ポスター制作</h1>
+    <p class="explanation">架空のショップやイベントを想定したPOPデザインのポスターを制作しました。<br>
+                            コンセプトに合わせた色使いやレイアウトを工夫し、見る人の興味を引くデザインを目指しています。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item2">
+            <img src="img/カフェチラシ.png" alt="カフェ">
+            <div class="bonnyme-text">
+                <p class="sub-title">カフェポスター（Cafe Knit）</p>
+                <p class="description">「編み物ができるカフェ」というユニークなコンセプトのポスターを制作しました。<br>
+                                        近年人気の“編み物”を楽しむための時間と空間を提供するカフェをイメージし、温かみのあるデザインに仕上げています。<br>
+                                        やさしい色合いや素材感にこだわり、くつろぎと癒しを感じられる雰囲気を意識しました。</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="fade-up">
+            <div class="category-item2">
+            <img src="img/星空映画会.png" alt="星空映画会">
+            <div class="bonnyme-text">
+                <p class="sub-title">星空映画会ポスター</p>
+                <p class="description">星空の下で映画を楽しむイベント「星空映画会」のポスターを作成しました。<br>
+                                        家族連れやカップル、友人同士など幅広い層が楽しめるよう、親しみやすくポップなデザインに。<br>
+                                        楽しい雰囲気が伝わるようにアイコンや写真を活かし、イベントのワクワク感を視覚的に表現しました。
+
+
+                </p>
+            </div>
+            </div>
+        </div>
+</div>
+
+<div class="btn2">
+        <a class="btn-all2" href="index.html">Back to Top</a>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); // ← これで何回も出るように
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+
+</body>
+</html>

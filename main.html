@@ -203,27 +203,20 @@
   });
 </script>
 
- <script>
-  window.addEventListener('load', () => {
-       
-      const isFromIndex = sessionStorage.getItem('isFromIndex');
-
-    　if (isFromIndex) {
-           
-            sessionStorage.removeItem('isFromIndex');
-        } else {
-          
-            window.location.replace('index.html');
+<script>
+      window.addEventListener('load', () => {
+        
+        sessionStorage.removeItem('isFromIndex');
+      });
+    
+      
+      if (performance.navigation.type === 1) { 
+        
+        if (!sessionStorage.getItem('isFromIndex')) {
+          window.location.replace('index.html');
         }
-    });
-</script>
+      }
+    </script>
 
 </body>
 </html>
-
-
-
-
-
-
-

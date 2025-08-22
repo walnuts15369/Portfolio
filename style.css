@@ -804,22 +804,7 @@ body {
     font-size: 16px;
   }
 
-  .cat {
-    margin-top: 30px;
-    max-width: 300px;
-  }
-  .cat-container {
-    width: 450px; 
-  }
 
-
-  @keyframes bounceDown {
-    0% { transform: translate(-50%, -200px) rotate(-5deg); }
-    40% { transform: translate(-50%, 0px) rotate(-5deg); }
-    60% { transform: translate(-50%, -40px) rotate(-5deg); }
-    80% { transform: translate(-50%, 15px) rotate(-5deg); }
-    100% { transform: translate(-50%, 0px) rotate(-5deg); }
-  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px){
@@ -873,38 +858,7 @@ body {
     padding-left: 20px;
   }
 
-    .cat-container {
-    width: 300px; /* 画像の幅をさらに縮小 */
-  }
   
-  /* バウンドアニメーションの調整 */
-  @keyframes bounceDown {
-    0% { transform: translate(-50%, -150px) rotate(-5deg); }
-    40% { transform: translate(-50%, 0px) rotate(-5deg); }
-    60% { transform: translate(-50%, -30px) rotate(-5deg); }
-    80% { transform: translate(-50%, 10px) rotate(-5deg); }
-    100% { transform: translate(-50%, 0px) rotate(-5deg); }
-  }
-
-  /* flash-inアニメーションの調整（画面サイズに合わせて白くなる範囲を調整） */
-  @keyframes whiteFlash {
-    0% {
-      width: 0px;
-      height: 0px;
-      opacity: 0;
-    }
-    30% {
-      opacity: 0.3;
-    }
-    70% {
-      opacity: 0.6;
-    }
-    100% {
-      width: 1500px; /* スマートフォン向けに縮小 */
-      height: 1500px;
-      opacity: 1;
-    }
-  }
 }
 
 
@@ -1007,3 +961,55 @@ body {
   }
 
 }
+
+@media screen and (max-width: 768px) {
+  .cat-container {
+    width: 450px;
+  }
+
+
+  @keyframes bounceDown {
+    0% { transform: translate(-50%, -200px) rotate(-5deg); }
+    40% { transform: translate(-50%, 0px) rotate(-5deg); }
+    60% { transform: translate(-50%, -40px) rotate(-5deg); }
+    80% { transform: translate(-50%, 15px) rotate(-5deg); }
+    100% { transform: translate(-50%, 0px) rotate(-5deg); }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .cat-container {
+    width: 300px; 
+  }
+  
+ 
+  @keyframes bounceDown {
+    0% { transform: translate(-50%, -150px) rotate(-5deg); }
+    40% { transform: translate(-50%, 0px) rotate(-5deg); }
+    60% { transform: translate(-50%, -30px) rotate(-5deg); }
+    80% { transform: translate(-50%, 10px) rotate(-5deg); }
+    100% { transform: translate(-50%, 0px) rotate(-5deg); }
+  }
+
+
+  @keyframes whiteFlash {
+    0% {
+      width: 0px;
+      height: 0px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 0.3;
+    }
+    70% {
+      opacity: 0.6;
+    }
+    100% {
+      width: 1500px; 
+      height: 1500px;
+      opacity: 1;
+    }
+  }
+}
+

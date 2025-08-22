@@ -957,7 +957,12 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
-    top: 50%;
+    position: absolute;
+  /*top: 50%;*/
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  height: auto;
   }
   
   @keyframes bounceDown {
@@ -972,7 +977,12 @@ body {
 @media screen and (max-width: 600px) {
   .cat-container {
     width: 300px;
-    top: 50%;
+    position: absolute;
+  /*top: 50%;*/
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  height: auto;
   }
 
   @keyframes bounceDown {
@@ -1002,6 +1012,7 @@ body {
     }
   }
 }
+
 
 
 

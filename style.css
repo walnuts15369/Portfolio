@@ -957,7 +957,7 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
-  text-aligin: center;
+    margin: 0auto;
     overflow: hidden;
   }
   
@@ -973,7 +973,7 @@ body {
 @media screen and (max-width: 600px) {
   .cat-container {
     width: 300px;
-    text-aligin: center;
+    margin: 0auto;
     oevrflow: hidden;
   }
 
@@ -1004,6 +1004,7 @@ body {
     }
   }
 }
+
 
 
 

@@ -25,20 +25,19 @@
         container.classList.add('dropBounce');
       });
 
-      cat1.addEventListener('click', () => {
-        meow.play();
+cat1.addEventListener('click', () => {
+    meow.play();
+    sessionStorage.setItem('isFromIndex', 'true');
+    cat1.classList.add('fade-out');
+    flash.classList.add('flash-in');
 
-        
-        cat1.classList.add('fade-out');
-
-        
-        flash.classList.add('flash-in');
-
-        
-        setTimeout(() => {
-          window.location.href = 'main.html';
-        }, 1800);
+   
+    setTimeout(() => {
+        window.location.href = 'main.html';
+    }, 2500); 
+});
       });
     </script>
   </body>
 </html>
+

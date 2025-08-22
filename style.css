@@ -2,6 +2,7 @@
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
+  height: 200vh;
   padding: 0;
   color: #333;
   overflow-x: hidden;
@@ -182,6 +183,8 @@ header, section, footer {
 .pink-bg3 {
   background-color: #e2d6e7;
   padding: 40px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .Profile-name {
@@ -957,8 +960,8 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
+    display: flex;
     margin: 0auto;
-    overflow: hidden;
   }
   
   @keyframes bounceDown {
@@ -973,8 +976,8 @@ body {
 @media screen and (max-width: 600px) {
   .cat-container {
     width: 300px;
+    display: flex;
     margin: 0auto;
-    oevrflow: hidden;
   }
 
   @keyframes bounceDown {
@@ -1006,13 +1009,20 @@ body {
 }
 
 
+.moving-cat {
+    position: absolute;
+    width: 150px;;
+    height: auto;
+    animation: move-cat  infinite ;
+    z-index: 0; 
+}
 
 
-
-
-
-
-
-
-
-
+@keyframes move-cat {
+    0% {
+        transform: translate(100vw, 100vh);
+    }
+    100% {
+        transform: translate(-100vw, -100vh);
+    }
+}

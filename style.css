@@ -869,7 +869,7 @@ body {
 
 .cat-container {
   position: absolute;
-  top: -10%;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -965,7 +965,7 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
-    top: -10%;
+    top: 40%;
   }
 
 
@@ -1013,6 +1013,7 @@ body {
     }
   }
 }
+
 
 
 

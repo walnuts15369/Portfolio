@@ -15,29 +15,30 @@
 
     <audio id="meow" src="猫の鳴き声1.mp3" preload="auto"></audio>
 
-    <script>
-      const cat1 = document.getElementById('cat-front');
-      const flash = document.querySelector('.light-flash');
-      const meow = document.getElementById('meow');
-      const container = document.querySelector('.cat-container');
 
-      window.addEventListener('load', () => {
+<script>
+    const cat1 = document.getElementById('cat-front');
+    const flash = document.querySelector('.light-flash');
+    const meow = document.getElementById('meow');
+    const container = document.querySelector('.cat-container');
+
+    window.addEventListener('load', () => {
         container.classList.add('dropBounce');
-      });
+    });
 
-cat1.addEventListener('click', () => {
-    meow.play();
-    sessionStorage.setItem('isFromIndex', 'true');
-    cat1.classList.add('fade-out');
-    flash.classList.add('flash-in');
+    cat1.addEventListener('click', () => {
+        meow.play();
+        sessionStorage.setItem('isFromIndex', 'true');
+        cat1.classList.add('fade-out');
+        flash.classList.add('flash-in');
 
-   
-    setTimeout(() => {
-        window.location.href = 'main.html';
-    }, 2500); 
-});
-      });
-    </script>
+        setTimeout(() => {
+            window.location.href = 'main.html';
+        }, 2500); 
+    }); 
+</script>
+    
   </body>
 </html>
+
 

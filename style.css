@@ -869,7 +869,7 @@ body {
 
 .cat-container {
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -881,7 +881,7 @@ body {
   position: absolute;
   width: 100%;
   height: auto;
-  transition: opacity 1.5s ease-out; /* フェードアウトのためのtransitionを追加 */
+  transition: opacity 1.5s ease-out; 
 }
 
 #cat-front {
@@ -965,6 +965,7 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
+    top: -10%;
   }
 
 
@@ -1012,4 +1013,5 @@ body {
     }
   }
 }
+
 

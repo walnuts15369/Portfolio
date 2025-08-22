@@ -90,6 +90,8 @@
 </div>
 
 <div class="pink-bg3">
+  <div class="cat-background"></div>
+<div class="floating-cats"></div>
   <section>
     <div class="fade-up">
     <h3>ロゴ・バナー制作</h3>
@@ -108,7 +110,6 @@
     </div>
   </section>
 
-  <div class="pink-bg3">
     <div class="fade-up">
     <h2>チラシ制作</h2>
     <div class="pop">
@@ -120,9 +121,8 @@
     </div>
   </div>
   </section>
-</div>
 
-<div class="pink-bg3">
+
 <section>
   <div class="fade-up">
   <h3>ロゴ・ショップカード</h3>
@@ -172,8 +172,8 @@
     <div class="contact-container">
     <div class="contact-text">
     <h6>Contact</h6>
-    <p>Email：369walnuts9603@gmail.com</p>
-    <p>Instagram (DM)：0o_walnuts_o0</p>
+    <p>Email：strawberrycosme82melts@gmail.com</p>
+    <p>TEL：070-8994-1129</p>
     </div>
     <img class="camera" src="img/ねこ.png" alt="チェキ風">
     </div>
@@ -218,7 +218,25 @@
       }
     </script>
 
-  <script>
+    <script>
+  const cats = document.querySelectorAll('.bg-cat');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    cats.forEach((cat, index) => {
+      const direction = index % 2 === 0 ? 1 : -1; 
+      const baseOffset = index * 30;
+      const y = scrollY * 0.2 + baseOffset;
+      const x = scrollY * 0.05 * direction;
+
+      cat.style.transform = `translate(${x}px, -${y}px) rotate(${direction * 2}deg)`;
+    });
+  });
+</script>
+
+
+<script>
     document.addEventListener('DOMContentLoaded', () => {
         
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
@@ -277,7 +295,3 @@
 
 </body>
 </html>
-
-
-
-

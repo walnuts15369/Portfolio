@@ -183,7 +183,7 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
         } else {
-          entry.target.classList.remove('show'); // ← これで何回も出るように
+          entry.target.classList.remove('show'); 
         }
       });
     }, {
@@ -196,8 +196,24 @@
   });
 </script>
 
+ <script>
+  window.addEventListener('load', () => {
+       
+      const isFromIndex = sessionStorage.getItem('isFromIndex');
+
+    　if (isFromIndex) {
+           
+            sessionStorage.removeItem('isFromIndex');
+        } else {
+          
+            window.location.replace('index.html');
+        }
+    });
+</script>
+
 </body>
 </html>
+
 
 
 

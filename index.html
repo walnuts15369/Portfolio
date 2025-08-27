@@ -17,28 +17,27 @@
 
 
 <script>
-    const cat1 = document.getElementById('cat-front');
-    const flash = document.querySelector('.light-flash');
-    const meow = document.getElementById('meow');
-    const container = document.querySelector('.cat-container');
+      const cat1 = document.getElementById('cat-front');
+      const flash = document.querySelector('.light-flash');
+      const meow = document.getElementById('meow');
+      const container = document.querySelector('.cat-container');
 
-    window.addEventListener('load', () => {
+      window.addEventListener('load', () => {
         container.classList.add('dropBounce');
-    });
+      });
 
-    cat1.addEventListener('click', () => {
+      cat1.addEventListener('click', () => {
         meow.play();
         sessionStorage.setItem('isFromIndex', 'true');
         cat1.classList.add('fade-out');
         flash.classList.add('flash-in');
 
         setTimeout(() => {
-            window.location.href = 'main.html';
-        }, 2500); 
-    }); 
-</script>
+          window.location.href = 'main.html';
+        }, 2500);
+      });
+    </script>
     
   </body>
 </html>
-
 

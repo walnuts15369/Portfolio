@@ -873,13 +873,14 @@ body {
 
 .cat-container {
   position: absolute;
-  /*top: 50%;*/
+  top: 0;
   left: 30%;
   transform: translate(-50%, -50%);
   z-index: 10;
   width: 600px;
   height: auto;
 }
+
 
 .cat {
   position: absolute;
@@ -960,9 +961,12 @@ body {
 @media screen and (max-width: 768px) {
   .cat-container {
     width: 450px;
-    display: flex;
-    margin: 0auto;
+    top: 35%;
+    left: 10%;
   }
+
+
+
   
   @keyframes bounceDown {
     0% { transform: translateY(-200px) rotate(-5deg); }
@@ -976,8 +980,8 @@ body {
 @media screen and (max-width: 600px) {
   .cat-container {
     width: 300px;
-    display: flex;
-    margin: 0auto;
+    top: 20%;
+    left: 10%;
   }
 
   @keyframes bounceDown {
@@ -1005,6 +1009,18 @@ body {
       height: 1500px;
       opacity: 1;
     }
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .cat-container {
+    width:600px;
+    top: 20%;
+    left: 15%;
+  }
+
+  .contact-text {
+    margin-left: 5%;
   }
 }
 

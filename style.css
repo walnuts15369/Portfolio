@@ -974,9 +974,6 @@ body {
     top: 35%;
     left: 10%;
   }
-
-
-
   
   @keyframes bounceDown {
     0% { transform: translateY(-200px) rotate(-5deg); }
@@ -985,6 +982,15 @@ body {
     80% { transform: translateY(15px) rotate(-5deg); }
     100% { transform: translateY(0px) rotate(-5deg); }
   }
+
+　.moving-cat {
+   max-width: 25vw; 
+   pointer-events: none;
+  animation-name: move-diagonal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+ }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -1070,6 +1076,7 @@ body {
   z-index: 0;
   animation: move-cat  infinite ;
 }
+
 
 
 

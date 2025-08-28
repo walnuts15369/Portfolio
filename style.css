@@ -983,14 +983,6 @@ body {
     100% { transform: translateY(0px) rotate(-5deg); }
   }
 
-　.moving-cat {
-   max-width: 25vw; 
-   pointer-events: none;
-  animation-name: move-diagonal;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
- }
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -1077,6 +1069,18 @@ body {
   animation: move-cat  infinite ;
 }
 
+@media screen and (max-width: 768px) {
+  .moving-cat {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  max-width: 100%; 
+  pointer-events: none;
+  animation-name: move-diagonal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  }
+}
 
 
 

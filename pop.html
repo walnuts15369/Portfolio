@@ -71,7 +71,69 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+        const pinkBg3s = document.querySelectorAll('.pink-bg3');
+        const catImages = [
+            'img/cat-front2.png',
+            'img/cat-sleep.png',
+            'img/cat-black.png',
+            'img/cat-side.png'
+        ];
+        
+        const catSize = 120;
+        const spacing = 300;
+
+        pinkBg3s.forEach(pinkBg3 => {
+            
+            let catContainer = pinkBg3.querySelector('.cat-background');
+            if (!catContainer) {
+                catContainer = document.createElement('div');
+                catContainer.className = 'cat-background';
+                pinkBg3.prepend(catContainer);
+            } else {
+                catContainer.innerHTML = '';
+            }
+
+            const containerWidth = pinkBg3.offsetWidth;
+            const containerHeight = pinkBg3.offsetHeight;
+
+            let catIndex = 0;
+
+            
+            for (let y = -spacing * 2; y < containerHeight + spacing * 2; y += spacing) {
+                for (let x = -spacing * 2; x < containerWidth + spacing * 2; x += spacing) {
+                    const catPath = catImages[catIndex % catImages.length];
+                    const catImg = document.createElement('img');
+                    catImg.src = catPath;
+                    catImg.className = 'moving-cat';
+
+                    catImg.style.left = `${x}px`;
+                    catImg.style.top = `${y}px`;
+
+                    catImg.style.width = `${catSize}px`;
+                    catImg.style.height = `${catSize}px`;
+
+                    catImg.style.animationName = 'floatDiagonal';
+                    catImg.style.animationDuration = '30s';
+                    catImg.style.animationIterationCount = 'infinite';
+                    catImg.style.animationTimingFunction = 'linear';
+
+                    const delay = (x + y) / (spacing * 2);
+                    catImg.style.animationDelay = `-${delay}s`;
+
+                    catContainer.appendChild(catImg);
+                    catIndex++;
+                }
+            }
+        });
+    });
+</script>
+
+
 
 </body>
 </html>
+
 

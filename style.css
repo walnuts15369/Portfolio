@@ -889,6 +889,8 @@ body {
   z-index: 10;
   width: 600px;
   height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 
@@ -1081,6 +1083,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

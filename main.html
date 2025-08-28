@@ -300,7 +300,13 @@
 
  <script>
     document.addEventListener('DOMContentLoaded', () => {
-        
+　
+　　　　　
+　　　　　const isMobile = window.innerWidth <= 768;
+　　　　　const catSize = isMobile ? 120 : 200; 
+　　　　　const spacing = isMobile ? 120 : 200; 
+
+      
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
         const catImages = [
             'img/cat-front2.png',
@@ -363,6 +369,7 @@
 
 </body>
 </html>
+
 
 
 

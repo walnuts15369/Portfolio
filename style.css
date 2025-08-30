@@ -1021,6 +1021,10 @@ body {
 }
 
 @media screen and (max-width: 1180px) {
+  .furigana {
+    margin-left: 83px;
+  }
+  
   .cat-container {
     width:600px;
     top: 20%;
@@ -1081,6 +1085,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

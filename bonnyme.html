@@ -9,7 +9,7 @@
 <body>
     <div class="pink-bg3">
     <div class="fade-up">
-    <h1 class="bonnyme-title">Bonny Me</h1>
+    <h1 class="bonnyme-title">Logo・Banner</h1>
     <p class="explanation">実際のクライアントワークで、新ブランド「Bonny Me」のロゴと、ECサイト用のバナーデザインを制作しました。<br>
                             ブランドのターゲット層や雰囲気に合わせ、上品で女性らしさを感じるデザインに仕上げました。</p>
     </div>
@@ -26,8 +26,8 @@
                                         また、シンプルな文字とシンボルマークの組み合わせでロゴを制作してほしいとのご依頼でした。<br>
                                         シンボルマークは、スカートを履いたシルエットの慎まやか（つつしまやか）な女性が歩くイメージで制作しました。<br>
                                         「n」につながる足は太く地に足をつけて歩いており、離れている足は細く軽やかにしました。<br>
-                                        色にもこだわりがあり、「見目麗しい慧眼（けいがん）の人※」という意味のダリアパープルと「繊細な感性・女性らし」」
-                                        の意味を持つマゼンタを、マーブル模様に混ぜ合わせました。※顔貌が美しく、本質を見抜く力のある賢い人という意味</p>
+                                        色にもこだわりがあり、「見目麗しい慧眼（けいがん）の人<span class="attention">※</span>」という意味のダリアパープルと「繊細な感性・女性らし」」
+                                        の意味を持つマゼンタを、マーブル模様に混ぜ合わせました。<span class="attention">※顔貌が美しく、本質を見抜く力のある賢い人という意味</span></p>
             </div>
         </div>
         </div>
@@ -87,12 +87,47 @@
 </div>
 </div>
 
-
+<p class="attention2">※画像をタップで拡大できます。</p>
 
     <div class="btn2">
         <a class="btn-all2" href="main.html">Back to Top</a>
     </div>
     </div>
+
+    <div id="modal" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="modal-img">
+</div>
+
+
+
+<script>
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+
+document.querySelectorAll('.category-item img').forEach(img => {
+    img.addEventListener('click', function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    });
+});
+
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+modal.onclick = function(e) {
+    if(e.target === modal) {
+    modal.style.display = "none";
+    }
+}
+</script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -118,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
+    
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
         const catImages = [
             'img/cat-front2.png',
@@ -178,4 +213,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 </body>
 </html>
-

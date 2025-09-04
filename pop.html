@@ -10,7 +10,7 @@
 <body>
     <div class="pink-bg3">
     <div class="fade-up">
-    <h1 class="bonnyme-title">ポスター制作</h1>
+    <h1 class="bonnyme-title">POP</h1>
     <p class="explanation">架空のショップやイベントを想定したPOPデザインのポスターを制作しました。<br>
                             コンセプトに合わせた色使いやレイアウトを工夫し、見る人の興味を引くデザインを目指しています。</p>
     </div>
@@ -44,10 +44,44 @@
         </div>
 </div>
 
+<p class="attention2">※画像をタップで拡大できます。</p>
+
 <div class="btn2">
         <a class="btn-all2" href="main.html">Back to Top</a>
     </div>
     </div>
+
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+
+
+    <script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll('.category-item2 img').forEach(img => {
+    img.addEventListener('click', function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    });
+});
+
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+modal.onclick = function(e) {
+    if(e.target === modal) {
+    modal.style.display = "none";
+    }
+}
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -58,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (entry.isIntersecting) {
         entry.target.classList.add('show');
         } else {
-          entry.target.classList.remove('show');
+            entry.target.classList.remove('show'); 
         }
     });
     }, {
@@ -73,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
+    
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
         const catImages = [
             'img/cat-front2.png',
@@ -132,8 +166,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-
 </body>
 </html>
-
 

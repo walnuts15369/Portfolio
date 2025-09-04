@@ -10,7 +10,7 @@
 <body>
     <div class="pink-bg3">
     <div class="fade-up">
-    <h1 class="bonnyme-title">高校時代の作品</h1>
+    <h1 class="bonnyme-title">Works from High School</h1>
     <p class="explanation">高校生の頃に制作したデザイン作品の一部をご紹介します。学校での課題やコンテストに取り組んだ際の作品です。</p>
     </div>
 
@@ -37,11 +37,47 @@
                     テーマは「colorful」だったため、見た瞬間に目を引くような鮮やかでポップな色使いを意識してデザインしました。色やモチーフの組み合わせに自分らしさを込め、他にはない大胆で印象的な世界観を表現しました。</p>
             </div>
         </div>
+
+<p class="attention2">※画像をタップで拡大できます。</p>
+
         </div>
     <div class="btn2">
         <a class="btn-all2" href="main.html">Back to Top</a>
     </div>
     </div>
+
+
+    <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+
+
+    <script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll('.category-item5 img,.category-item6 img').forEach(img => {
+    img.addEventListener('click', function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    });
+});
+
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+modal.onclick = function(e) {
+    if(e.target === modal) {
+    modal.style.display = "none";
+    }
+}
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -64,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-        
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-      
+    
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
         const catImages = [
             'img/cat-front2.png',
@@ -125,8 +161,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 </script>
 
-
 </body>
 </html>
-
 

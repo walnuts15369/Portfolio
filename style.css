@@ -413,8 +413,11 @@ h3 {
 
 .description {
   font-size: 16px;
-  color: #333;
+  color: #000000;
   line-height: 1.5;
+  background-color: #ffff;
+  opacity: 0.5;
+  padding: 10px;
 }
 
 .attention {
@@ -691,8 +694,8 @@ h3 {
 }
 
 
-.arrow {
-  width: 100px;
+.arrow,.arrow2 {
+  width: 150px;
   height: auto;
   margin-left: 3%;
 }
@@ -840,6 +843,45 @@ body {
   font-family: sans-serif;
 }
 
+
+  header {
+    flex-direction: column; 
+    height: auto; 
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu > li > a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; 
+  }
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+
+    width: 200px; 
+    background-color: #eaf4fb;
+    opacity: 0.7;
+    border-radius: 4px;
+    z-index: 1001;  
+    text-align: center;
+  }
+
+
   .some-class {
     margin-left: 0;
     text-align: center;
@@ -955,7 +997,24 @@ body {
   .pop-img img {
     border-radius: 4px;
   }
+
+  .retouching img {
+    width: 300px;
+    height: auto;
+    text-align: center;
+  }
   
+  .arrow {
+    rotate: 90deg;
+    margin-left: -10px;
+  }
+
+  .arrow2 {
+    width: 100px;
+    margin-left: 10px;
+  }
+
+
   .card-box-wide {
     border-radius: 10px;
   }

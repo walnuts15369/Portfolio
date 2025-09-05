@@ -881,10 +881,7 @@ body {
     text-align: center;
   }
 
-  
-.dropdown.hover-disabled:hover .dropdown-menu {
-  display: none !important;
-}
+
 
   .some-class {
     margin-left: 0;
@@ -1136,4 +1133,5 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 

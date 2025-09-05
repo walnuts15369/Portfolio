@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  background-color: #f7dde8;
+  overflow: hidden;
+}
+
+
+
+.cat-container {
+z-index: 10;
+max-width: 100%;
+height: auto;
+}
+
+
+.cat {
+  width: 600px;
+  height: auto;
+  margin-left: 30%;
+  transition: opacity 1.5s ease-out;
+  cursor: pointer;
+}
+
+#cat-front {
+  cursor: pointer;
+}
+
+.dropBounce {
+  animation: bounceDown 1.6s ease-out forwards;
+}
+
+@keyframes bounceDown {
+  0% { transform: translateY(-300px) rotate(-5deg); }
+  40% { transform: translateY(0px) rotate(-5deg); }
+  60% { transform: translateY(-60px) rotate(-5deg); }
+  80% { transform: translateY(20px) rotate(-5deg); }
+  100% { transform: translateY(0px) rotate(-5deg); }
+}
+
+.fade-out {
+  animation: fadeOutOnly 1.5s ease-out forwards;
+}
+
+@keyframes fadeOutOnly {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.light-flash {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+  filter: blur(100px);
+}
+
+.flash-in {
+animation: whiteFlash 2.5s ease-out forwards;
+}
+
+@keyframes whiteFlash {
+0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+30% {
+    opacity: 0.3;
+}
+70% {
+    opacity: 0.6;
+}
+100% {
+    width: 3000px;
+    height: 3000px;
+    opacity: 1;
+}
+}
+
+
+@media screen and (max-width: 1050px) {
+
+    body {
+        overflow: hidden;
+    }
+  .cat {
+    width: 800px;
+    margin-top: 30%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+    
+    body {
+        overflow: hidden;
+    }
+  .cat {
+    width: 600px;
+    margin-top: 20%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+    
+    body {
+        overflow: hidden;
+    }
+  .cat {
+    width: 500px;
+    margin-top: 30%;
+    margin-left: 15%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        overflow: hidden;
+    }
+
+    .cat {
+        width: 300px;
+        margin-top: 50%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+
+    .cat {
+        width: 300px;
+        margin-top: 40%;
+        margin-left: 10%;
+    }
+}

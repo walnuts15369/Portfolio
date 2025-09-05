@@ -10,7 +10,7 @@ body {
 
 .menu-title {
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 900;
   color: #FFF59A;
   font-family: 'Arial Black', sans-serif;
   letter-spacing: 1px;
@@ -1300,3 +1300,4 @@ body {
   animation-iteration-count: infinite;
   }
 }
+

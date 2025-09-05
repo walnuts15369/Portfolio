@@ -224,6 +224,25 @@
   </footer>
   </div>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    dropdownLinks.forEach(link => {
+      link.addEventListener("click", () => {
+       
+        dropdownMenu.style.display = "none";
+
+        setTimeout(() => {
+          dropdownMenu.style.display = "";
+        }, 1000); 
+      });
+    });
+  });
+</script>
+
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const fadeElements = document.querySelectorAll('.fade-up');
@@ -341,3 +360,4 @@
 
 </body>
 </html>
+

@@ -224,27 +224,30 @@
   </footer>
   </div>
 
- <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth > 768) return; 
 
     const dropdown = document.querySelector(".dropdown");
-    const toggle = document.querySelector(".dropdown-toggle");
-    const menu = document.querySelector(".dropdown-menu");
-    const links = document.querySelectorAll(".dropdown-menu a");
-
-    let isMenuClosedPermanently = false;
-
-    toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (isMenuClosedPermanently) return;
+    const toggle = document.querySelector(".dropdown > a");
+    const menu = dropdown.querySelector(".dropdown-menu");
+    const links = dropdown.querySelectorAll(".dropdown-menu a")
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault(); 
       dropdown.classList.toggle("open");
     });
 
+  
     links.forEach(link => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", function () {
         dropdown.classList.remove("open");
-        isMenuClosedPermanently = true;
+
+      
+        const targetId = this.getAttribute("href").slice(1); // #を除く
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
       });
     });
   });
@@ -368,5 +371,6 @@
 
 </body>
 </html>
+
 
 

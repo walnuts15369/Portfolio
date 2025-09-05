@@ -226,28 +226,36 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth > 768) return; 
+    if (window.innerWidth > 768) return; // 📱スマホだけ実行！
 
     const dropdown = document.querySelector(".dropdown");
-    const toggle = document.querySelector(".dropdown > a");
+    const toggle = dropdown.querySelector("a");
     const menu = dropdown.querySelector(".dropdown-menu");
-    const links = dropdown.querySelectorAll(".dropdown-menu a")
+    const links = dropdown.querySelectorAll(".dropdown-menu a");
+
+    // Worksをタップ → メニューを開閉する
     toggle.addEventListener("click", function (e) {
-      e.preventDefault(); 
+      e.preventDefault(); // hrefの動きを止める
       dropdown.classList.toggle("open");
     });
 
-  
+    // 中のリンクを押したらメニューを閉じてから移動
     links.forEach(link => {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); // まずhrefジャンプ止める
+
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        // プルダウン閉じる
         dropdown.classList.remove("open");
 
-      
-        const targetId = this.getAttribute("href").slice(1); // #を除く
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
+        // 少し遅らせて移動（メニュー閉じる時間を確保）
+        setTimeout(() => {
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100); // 0.1秒後に移動
       });
     });
   });
@@ -371,6 +379,7 @@
 
 </body>
 </html>
+
 
 
 

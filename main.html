@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TOP</title>
+<title>Portfolio</title>
 <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -24,6 +24,7 @@
           <li><a href="#retouching-site">Retouching</a></li>
         </ul>
       </li>
+      <li><a href="#Omikuji-site">Omikuji</a></li>
       <li><a href="#contact-site">Contact</a></li>
     </ul>
   </nav>
@@ -204,9 +205,38 @@
       <a class="btn-all" href="retouching.html">See More<img class="eye" src="img/Look.png" alt="目"></a>
     </div>
   </section>
+</div>
+</div>
 
+<section id="Omikuji-site">
+  <div class="yellow">
+    <section>
+    <div class="fade-up">
+    <h2>Omikuji</h2>
+    <p class="do">今日の運勢を占ってみよう！</p>
+    <div class="fade-up2">
+    <div class="three">
+    <img class="card-non" src="img/card.png" alt="カード">
+    <img class="card" src="img/card.png" alt="カード">
+    <img class="card-non" src="img/card.png" alt="カード">
+    </div>
+    </div>
+  </div>
+  </section>
+  </div>
+  </section>
+
+<div id="popup" class="popup">
+  <div class="fade-up">
+  <div class="popup-content">
+    <img id="popupImg" src="" alt="結果">
+    <div class="btn3">
+    <button id="backBtn" class="btn-all3">Back</button></div>
+  </div>
+  </div>
 </div>
-</div>
+
+
 
   <div class="pink-bg">
   <footer id="contact-site">
@@ -226,10 +256,68 @@
   </div>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".card,.card-non");
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popupImg");
+  const backBtn = document.getElementById("backBtn");
+
+  const omikujiImages = [
+    "img/art.png",
+    "img/health.png",
+    "img/meal.png",
+    "img/animal.png",
+    "img/sweets.png",
+    "img/travel.png",
+  ];
+
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const randomImg = omikujiImages[Math.floor(Math.random() * omikujiImages.length)];
+      popupImg.src = randomImg;
+      popup.style.display = "block";
+    });
+  });
+
+
+  function closePopup() {
+    popup.style.display = "none";
+    document.getElementById("Omikuji-site").scrollIntoView({ behavior: "smooth" });
+  }
+  backBtn.addEventListener("click", closePopup);
+});
+</script>
+
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); 
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up2');
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -281,8 +369,7 @@
   });
 </script>
 
-
- <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
       
         const pinkBg3s = document.querySelectorAll('.pink-bg3');
@@ -344,10 +431,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-

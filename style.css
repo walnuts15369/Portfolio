@@ -939,7 +939,7 @@ footer {
 
 @media screen and (max-width: 400px) {
   .menu {
-    gap: -5px;
+    gap: -15px;
   }
 }
 
@@ -1261,6 +1261,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

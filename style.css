@@ -937,12 +937,6 @@ footer {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 400px) {
-  .menu {
-    gap: -15px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   html, body {
   margin: 0;
@@ -977,7 +971,7 @@ body {
   .menu > li > a {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px; 
   }
 
@@ -1261,6 +1255,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

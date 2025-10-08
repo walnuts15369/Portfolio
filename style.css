@@ -752,7 +752,7 @@ h3 {
 }
 
 .yellow {
-  background-color: #F6EE99;
+  background-color: #f3ecae;
   padding: 30px;
   padding-bottom: 50px;
   text-align: center;
@@ -792,7 +792,7 @@ h3 {
 
 .popup-content {
   background: #fff;
-  margin: 6% auto;
+  margin: 50% auto;
   padding: 10px ;
   border-radius: 12px;
   width: 500px;
@@ -805,6 +805,7 @@ h3 {
   width: 500px;
   margin-bottom: -5%;
 }
+
 
 
 .btn3 {
@@ -996,6 +997,27 @@ body {
     text-align: center;
   }
 
+ .main-visual{
+    flex-direction: column; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 16px;  
+  }
+  .text-block{
+    width: 100%;
+    order: 1;     
+    text-align: left; 
+  }
+  .profile-photo{
+    width: 100%;
+    max-width: 420px; 
+    height: auto;
+    margin: 16px auto 0; 
+    order: 2; 
+  }
+
+
   .profile-section {
     flex-direction: column; 
   }
@@ -1123,6 +1145,16 @@ body {
     margin-left: 10px;
   }
 
+   .popup-content {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .popup-content img {
+    width: 100%;
+    height: auto;
+  }
+
 
   .card-box-wide {
     border-radius: 10px;
@@ -1155,26 +1187,26 @@ body {
     gap: 5px;
   }
 
-.main-visual {
-    display: flex;
-    flex-direction: row;
+ .main-visual{
+    flex-direction: column;  
     align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 16px;  
   }
-
-  .profile-photo {
-    width: 50vw; 
-    max-width: 400px; 
+  .text-block{
+    width: 100%;
+    order: 1;  
+    text-align: left;  
+  }
+  .profile-photo{
+    width: 100%;
+    max-width: 420px; 
     height: auto;
-    margin-right: -30px;
+    margin: 16px auto 0;  
+    order: 2;  
   }
 
-  .text-block {
-    width: 45%;
-    text-align: left;
-  }
 
   .profile-section {
     display: flex;
@@ -1255,7 +1287,6 @@ body {
   animation-iteration-count: infinite;
   }
 }
-
 
 
 

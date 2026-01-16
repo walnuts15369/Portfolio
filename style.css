@@ -792,18 +792,20 @@ h3 {
 
 .popup-content {
   background: #fff;
-  margin: 50% auto;
+  /*margin: 50% auto;*/
   padding: 10px ;
   border-radius: 12px;
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .popup-content img {
-  height: 100%;
-  width: 500px;
-  margin-top: -5px;
+  height: auto;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
 }
 
 
@@ -1287,6 +1289,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

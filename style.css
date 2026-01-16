@@ -803,7 +803,7 @@ h3 {
 .popup-content img {
   height: 100%;
   width: 500px;
-  margin-top: -80%;
+  margin-top: -5px;
 }
 
 
@@ -1287,6 +1287,7 @@ body {
   animation-iteration-count: infinite;
   }
 }
+
 
 
 

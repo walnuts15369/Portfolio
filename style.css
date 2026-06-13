@@ -1194,7 +1194,12 @@ body {
     font-size: 16px;
   }
 
-
+.Video iframe {
+  width: 100%; 
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 
 }
 
@@ -1258,7 +1263,12 @@ body {
     display: none;
   }
 
-  
+  .Video iframe {
+  width: 100%; 
+  max-width: 560px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
 
 }
 

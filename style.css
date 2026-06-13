@@ -744,7 +744,7 @@ h3 {
 }
 
 .YouTube {
-  display: flex;
+  aligin-items: center;
 }
 
 #Omikuji-site {
@@ -756,11 +756,11 @@ h3 {
 
 .yellow {
   background-color: #f3ecae;
-  padding: 30px;
-  padding-bottom: 50px;
+  padding: 50px 30px;
   text-align: center;
-  margin: -50px -200px ;
   margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -797,8 +797,7 @@ h3 {
 
 .popup-content {
   background: #fff;
-  /*margin: 50% auto;*/
-  padding: 10px ;
+  padding: 20px ;
   border-radius: 12px;
   width: 500px;
   text-align: center;

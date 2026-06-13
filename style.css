@@ -761,7 +761,7 @@ h3 {
   background-color: #f3ecae;
   padding: 0;
   text-align: center;
-  margin: 0;
+  margin: -500px -500px;
   width: 100%;
   box-sizing: border-box;
   background-size: cover;
@@ -1186,9 +1186,10 @@ body {
     font-size: 16px;
   }
 
-  .YouTube {
-   width: 400px}
-  }
+ .Video iframe {
+  width: 400px;  /* 横幅を小さく（元の560pxから変更） */
+  height: 225px; /* 縦幅を小さく（16:9の比率を維持） */
+}
 
 }
 

@@ -764,7 +764,8 @@ h3 {
   overflow: hidden;
 }
 
-background-color: #f3ecae;
+.yellow {
+  background-color: #f3ecae;
   text-align: center;
   box-sizing: border-box;
   padding: 40px 0; /* 上下の余白 */
@@ -773,7 +774,7 @@ background-color: #f3ecae;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-
+}
 
 .three {
   display: flex;

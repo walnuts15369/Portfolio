@@ -751,10 +751,10 @@ h3 {
 }
 
 .Video iframe {
-  width: 100%;            /* 親要素の幅いっぱいに広げる */
-  max-width: 800px;   /* パソコンでの最大サイズ（元の大きさ） */
-  height: auto;           /* 高さを自動調整 */
-  aspect-ratio: 16 / 9;   /* 横幅に合わせて16:9の比率を維持する */
+  width: 100%; 
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 #Omikuji-site {

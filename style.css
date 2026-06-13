@@ -766,12 +766,29 @@ h3 {
 
 .yellow {
   background-color: #f3ecae;
+  /*
   padding: 0;
   text-align: center;
   margin: -500px -500px;
-  width: 150%;
+  width: 100%;
   box-sizing: border-box;
-  background-size: cover;
+  background-size: cover;*/
+  
+  box-sizing: border-box;
+  /* ▼ 無理やり左右の余白をなくす力技（画面幅を基準に計算） */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+
+  /* ▼ 上下の余白も無理やり削るなら、マイナスマージンを適度な数値に */
+  margin-top: -20px;    /* 上の要素（ナビバー）との隙間に合わせて微調整してください */
+  margin-bottom: -20px; /* 下の要素との隙間に合わせて微調整してください */
+  
+  /* パディング（内側の余白）は0だと文字が詰まるので上下だけ少し開けるのがおすすめ */
+  padding: 40px 0;
 }
 
 

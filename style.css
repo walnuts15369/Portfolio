@@ -750,6 +750,13 @@ h3 {
   gap: 20px; 
 }
 
+.Video iframe {
+  width: 100%;            /* 親要素の幅いっぱいに広げる */
+  max-width: 560px;       /* パソコンでの最大サイズ（元の大きさ） */
+  height: auto;           /* 高さを自動調整 */
+  aspect-ratio: 16 / 9;   /* 横幅に合わせて16:9の比率を維持する */
+}
+
 #Omikuji-site {
   background-size: cover;
   height: auto;
@@ -762,7 +769,7 @@ h3 {
   padding: 0;
   text-align: center;
   margin: -500px -500px;
-  width: 100%;
+  width: 150%;
   box-sizing: border-box;
   background-size: cover;
 }
@@ -1186,10 +1193,7 @@ body {
     font-size: 16px;
   }
 
- .Video iframe {
-  width: 400px;  /* 横幅を小さく（元の560pxから変更） */
-  height: 225px; /* 縦幅を小さく（16:9の比率を維持） */
-}
+
 
 }
 
@@ -1252,6 +1256,8 @@ body {
   .card-non {
     display: none;
   }
+
+  
 
 }
 

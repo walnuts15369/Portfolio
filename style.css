@@ -775,20 +775,17 @@ h3 {
   background-size: cover;*/
   
   box-sizing: border-box;
-  /* ▼ 無理やり左右の余白をなくす力技（画面幅を基準に計算） */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-left: 0;
-  margin-right: 0;
+　padding: 40px 0;
 
-  /* ▼ 上下の余白も無理やり削るなら、マイナスマージンを適度な数値に */
-  margin-top: -20px;    /* 上の要素（ナビバー）との隙間に合わせて微調整してください */
-  margin-bottom: -20px; /* 下の要素との隙間に合わせて微調整してください */
+  /* ▼ 周りの要素を無視して横幅いっぱいに広げる力技 */
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
   
-  /* パディング（内側の余白）は0だと文字が詰まるので上下だけ少し開けるのがおすすめ */
-  padding: 40px 0;
+  /* ▼ 上のPortfolio（ナビバー）との隙間をゼロにする */
+  top: 0; 
+  margin: 0;
 }
 
 

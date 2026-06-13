@@ -764,18 +764,15 @@ h3 {
   overflow: hidden;
 }
 
-.yellow {
-  background-color: #f3ecae;
-  padding: 0;
+background-color: #f3ecae;
   text-align: center;
-  width: 100%;
   box-sizing: border-box;
-  background-size: cover;
-  /* ▼ 周りの要素を無視して横幅いっぱいに広げる力技 */
-  position: absolute;
-  left: 0;
-  right: 0;
-}
+  padding: 40px 0; /* 上下の余白 */
+
+  /* ▼ position: absolute を使わずに横幅を画面いっぱいに広げる魔法の記述 */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
 
 .three {

@@ -766,22 +766,15 @@ h3 {
 
 .yellow {
   background-color: #f3ecae;
-  /*
   padding: 0;
   text-align: center;
-  margin: -500px -500px;
   width: 100%;
   box-sizing: border-box;
-  background-size: cover;*/
-  
-  box-sizing: border-box;
-　padding: 40px 0;
-
+  background-size: cover;
   /* ▼ 周りの要素を無視して横幅いっぱいに広げる力技 */
   position: absolute;
   left: 0;
   right: 0;
-  width: 100%;
 }
 
 

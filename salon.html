@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">Logo/h1>
+    <p class="explanation">新しくオープンする美容院をイメージして作成した架空のブランドロゴです。<br>
+大人の女性をターゲットに、洗練された「高級感」と、近年再ブームを迎えている「レトロ」な世界観の融合を大切に、落ち着きのある上品な雰囲気を目指しました。<br>
+ロゴには深みのあるクラシックグリーンを採用し、どこか懐かしくも新しい、モダンで優雅な印象に仕上げています。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item3">
+            <img src="img/深川ヘアサロン.png" alt="ロゴ">
+            <div class="bonnyme-text">
+                <p class="sub-title">ロゴ</p>
+                <p class="description">直線を活かした美しいタイポグラフィと、アール・デコ調の幾何学的なモチーフで表現しました。<br>
+                    下部に配置した扇型のあしらいは、ヘアサロンの必需品である「コーム（櫛）」や「美しく広がる髪」を連想させるとともに、末広がりの繁栄を意味しています。<br>
+                    クラシカルな美しさを取り入れることで、日常を忘れて特別な時間を過ごせるサロンの特別感を込めました。</p>
+            </div>
+        </div>
+        </div>
+
+      
+
+<p class="attention2">※画像をタップで拡大できます。</p>
+
+    <div class="btn2">
+        <a class="btn-all2" href="main.html">Back to Top</a>
+    </div>
+    </div>
+
+
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+
+
+
+    <script>
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll('.category-item3 img,.category-item4 img').forEach(img => {
+    img.addEventListener('click', function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    });
+});
+
+
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+modal.onclick = function(e) {
+    if(e.target === modal) {
+    modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+        entry.target.classList.remove('show');
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+        const pinkBg3s = document.querySelectorAll('.pink-bg3');
+        const catImages = [
+            'img/cat-front2.png',
+            'img/cat-sleep.png',
+            'img/cat-black.png',
+            'img/cat-side.png'
+        ];
+        
+        const catSize = 120;
+        const spacing = 300;
+
+        pinkBg3s.forEach(pinkBg3 => {
+            
+            let catContainer = pinkBg3.querySelector('.cat-background');
+            if (!catContainer) {
+                catContainer = document.createElement('div');
+                catContainer.className = 'cat-background';
+                pinkBg3.prepend(catContainer);
+            } else {
+                catContainer.innerHTML = '';
+            }
+
+            const containerWidth = pinkBg3.offsetWidth;
+            const containerHeight = pinkBg3.offsetHeight;
+
+            let catIndex = 0;
+
+            
+            for (let y = -spacing * 2; y < containerHeight + spacing * 2; y += spacing) {
+                for (let x = -spacing * 2; x < containerWidth + spacing * 2; x += spacing) {
+                    const catPath = catImages[catIndex % catImages.length];
+                    const catImg = document.createElement('img');
+                    catImg.src = catPath;
+                    catImg.className = 'moving-cat';
+
+                    catImg.style.left = `${x}px`;
+                    catImg.style.top = `${y}px`;
+
+                    catImg.style.width = `${catSize}px`;
+                    catImg.style.height = `${catSize}px`;
+
+                    catImg.style.animationName = 'floatDiagonal';
+                    catImg.style.animationDuration = '30s';
+                    catImg.style.animationIterationCount = 'infinite';
+                    catImg.style.animationTimingFunction = 'linear';
+
+                    const delay = (x + y) / (spacing * 2);
+                    catImg.style.animationDelay = `-${delay}s`;
+
+                    catContainer.appendChild(catImg);
+                    catIndex++;
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

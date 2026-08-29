@@ -445,8 +445,8 @@ section, footer {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius:3px;
-  display: block;
-  width: fit-content;
+  /*display: block;
+  width: fit-content;*/
 }
 
 .sub-title {

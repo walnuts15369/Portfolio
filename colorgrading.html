@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Grading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pink-bg3">
+    <div class="fade-up">
+    <h1 class="bonnyme-title">Color Grading</h1>
+    <p class="explanation">映像の世界観を決定づけるカラーグレーディングを、DaVinci Resolveを用いて制作しました。<br>
+        単なる色調補正にとどまらず、シネマティックな質感と物語性を意識し、光と影それぞれに意図を持たせた配色設計を行っています。</p>
+    </div>
+
+    <div class="category-list">
+        <div class="fade-up">
+        <div class="category-item">
+            <video controls preload="metadata" style="max-width: 500px; width: 100%; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background-color: white; padding: 15px;">
+                <source src="video/car.mp4" type="video/mp4">
+            </video>
+            <div class="bonnyme-text">
+                <p class="sub-title">シネマティックカラーグレーディング</p>
+                <p class="description">制作期間：1h／使用ソフト：DaVinci Resolve<br>
+                                       実写映像に対し、映画のような重厚感と没入感を持たせることを目的にカラーグレーディングを行いました。<br>
+                                       ハイライト(明部)にはオレンジ系の色みを、シャドウ(暗部)にはティール系の色みを加えるいわゆる「オレンジ&ティール」の配色を採用し、被写体を暖色で際立たせつつ、背景や影に寒色の奥行きを持たせることで、映像全体にシネマティックなコントラストと立体感を生み出しています。<br>
+                                       単に色を派手にするのではなく、シーンの温度感・時間帯・感情に合わせてトーンを調整し、見る人が違和感なく物語に没入できる仕上がりを意識しました。</p>
+            </div>
+        </div>
+        </div>
+</div>
+
+<p class="attention2">※動画はタップで再生できます。</p>
+
+    <div class="btn2">
+        <a class="btn-all2" href="main.html">Back to Top</a>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        } else {
+        entry.target.classList.remove('show'); 
+        }
+    });
+    }, {
+    threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+    observer.observe(el);
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    
+        const pinkBg3s = document.querySelectorAll('.pink-bg3');
+        const catImages = [
+            'img/cat-front2.png',
+            'img/cat-sleep.png',
+            'img/cat-black.png',
+            'img/cat-side.png'
+        ];
+        
+        const catSize = 120;
+        const spacing = 300;
+
+        pinkBg3s.forEach(pinkBg3 => {
+            
+            let catContainer = pinkBg3.querySelector('.cat-background');
+            if (!catContainer) {
+                catContainer = document.createElement('div');
+                catContainer.className = 'cat-background';
+                pinkBg3.prepend(catContainer);
+            } else {
+                catContainer.innerHTML = '';
+            }
+
+            const containerWidth = pinkBg3.offsetWidth;
+            const containerHeight = pinkBg3.offsetHeight;
+
+            let catIndex = 0;
+
+            
+            for (let y = -spacing * 2; y < containerHeight + spacing * 2; y += spacing) {
+                for (let x = -spacing * 2; x < containerWidth + spacing * 2; x += spacing) {
+                    const catPath = catImages[catIndex % catImages.length];
+                    const catImg = document.createElement('img');
+                    catImg.src = catPath;
+                    catImg.className = 'moving-cat';
+
+                    catImg.style.left = `${x}px`;
+                    catImg.style.top = `${y}px`;
+
+                    catImg.style.width = `${catSize}px`;
+                    catImg.style.height = `${catSize}px`;
+
+                    catImg.style.animationName = 'floatDiagonal';
+                    catImg.style.animationDuration = '30s';
+                    catImg.style.animationIterationCount = 'infinite';
+                    catImg.style.animationTimingFunction = 'linear';
+
+                    const delay = (x + y) / (spacing * 2);
+                    catImg.style.animationDelay = `-${delay}s`;
+
+                    catContainer.appendChild(catImg);
+                    catIndex++;
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -320,7 +320,19 @@
   </footer>
   </div>
 
-
+<script>
+  document.querySelectorAll('.dropdown-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const dropdown = link.closest('.dropdown');
+      if (dropdown) {
+        dropdown.classList.add('force-close');
+        setTimeout(() => {
+          dropdown.classList.remove('force-close');
+        }, 600); // スクロール移動が終わる頃にクラスを外す
+      }
+    });
+  });
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

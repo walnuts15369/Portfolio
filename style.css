@@ -1217,6 +1217,13 @@ footer {
     margin-left: 83px;
   }
 
+/* サロンロゴのみ、PC表示時に画像を大きく(スマホは現状維持) */
+@media screen and (min-width: 769px) {
+  #salon-site .card-box {
+    width: 350px; /* 現在220px→好きな数値に。試しに大きめの値を入れています */
+  }
+}
+
   .contact-text {
     margin-left: 5%;
   }

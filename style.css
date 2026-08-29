@@ -636,7 +636,7 @@ section, footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
   padding-top: 40px;
   align-items: center;
 }
@@ -654,7 +654,13 @@ section, footer {
   height: 250px;
 }
 
-.arrow, .arrow2 {
+.arrow  {
+  width: 80px;
+  height: auto;
+  margin-left: 0,-10px;
+}
+
+.arrow2 {
   width: 80px;
   height: auto;
   margin-left: 3%;

@@ -121,6 +121,11 @@ header {
   display: block;
 }
 
+/* タップ後、スクロール移動中だけ強制的にプルダウンを閉じる */
+.dropdown.force-close .dropdown-menu {
+  display: none !important;
+}
+
 .menu li a:active {
   text-shadow: 2px 2px 3px #fff;
 }

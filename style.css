@@ -1132,7 +1132,10 @@ footer {
     border-radius: 4px;
   }
 
-
+.retouching {
+    display: flex;
+  flex-direction: column;
+  text-align: center;}
 
   .before img,
 .after img { 

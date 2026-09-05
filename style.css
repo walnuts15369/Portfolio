@@ -1134,8 +1134,9 @@ footer {
 
 
 
-  .retouching img {
-    width: 250px;
+  .before img,
+.after img { 
+    max-width: 280px;
     height: auto;
   }
 

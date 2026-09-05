@@ -721,6 +721,11 @@ section, footer {
 }
 
 @media screen and (max-width: 768px) {
+  .video-item {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   .video-item video {
     max-width: 320px;
     margin: 0 auto;
@@ -1127,23 +1132,23 @@ footer {
     border-radius: 4px;
   }
 
-  .retouching {
-    flex-wrap: nowrap;
-    gap: 10px;
-    justify-content: center;
+ .retouching {
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
   }
 
   .retouching img {
-    width: 40%;
-    max-width: 140px;
+    width: 80%;
+    max-width: 300px;
     height: auto;
   }
 
   .arrow {
-    rotate: 0deg;
-    width: 30px;
-    margin-left: 0;
+    rotate: 90deg;
+    width: 40px;
+    margin: 0;
   }
 
   .arrow2 {

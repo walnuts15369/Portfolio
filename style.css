@@ -727,7 +727,7 @@ section, footer {
   }
 
   .video-item video {
-    max-width: 320px;
+    max-width: 280px;
     margin: 0 auto;
   }
 }
@@ -1132,7 +1132,7 @@ footer {
     border-radius: 4px;
   }
 
- .retouching {
+/* .retouching {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1149,7 +1149,7 @@ footer {
     rotate: 90deg;
     width: 40px;
     margin: 0;
-  }
+  }*/
 
   .arrow2 {
     width: 100px;

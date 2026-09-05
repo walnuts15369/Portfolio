@@ -723,6 +723,7 @@ section, footer {
 @media screen and (max-width: 768px) {
   .video-item video {
     max-width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -1126,15 +1127,23 @@ footer {
     border-radius: 4px;
   }
 
+  .retouching {
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .retouching img {
-    width: 300px;
+    width: 40%;
+    max-width: 140px;
     height: auto;
-    text-align: center;
   }
 
   .arrow {
-    rotate: 90deg;
-    margin-left: -10px;
+    rotate: 0deg;
+    width: 30px;
+    margin-left: 0;
   }
 
   .arrow2 {

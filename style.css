@@ -1132,8 +1132,12 @@ footer {
     border-radius: 4px;
   }
 
+.card-box-wide {
+  width: 280px;   /* 箱自体の幅もスマホ用に縮小 */
+}
+
 .card-box-wide img {
-   max-width: 280px;
+  max-width: 250px;  /* 280px → 200pxなど、好きな数値に調整 */
 }
 
  .retouching {

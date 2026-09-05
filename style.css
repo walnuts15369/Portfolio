@@ -1132,8 +1132,8 @@ footer {
     border-radius: 4px;
   }
 
-.card-box img {
-   max-width:280px;
+.card-box-wide img {
+   max-width: 280px;
 }
 
  .retouching {
